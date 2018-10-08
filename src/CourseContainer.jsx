@@ -103,7 +103,6 @@ class CourseContainer extends React.Component {
         {selectors}
         <div id="course-container-buttons">
           <button onClick={this.addEntry}>Add another course</button>
-          <button onClick={this.addEntry}>Get times</button>
         </div>
         {this.state.entries.map((entry) => {return this.getTime(entry.subject, entry.code, entry.section)}).filter((el) => {return el != ''}).join(", ")}
       </div>

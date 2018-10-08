@@ -68,7 +68,7 @@ class CourseSelector extends React.Component {
           isDisabled={section_options.length == 0}
           className="course-select"
           ref={(el) => { this.section_select = el }} />
-        <img src="../assets/cross.png"
+        <img src="./assets/cross.png"
           style={{verticalAlign: "middle", cursor: "pointer"}}
           width="16" height="16"
           onClick={() => {this.props.removeEntry(this.props.index)}} />
