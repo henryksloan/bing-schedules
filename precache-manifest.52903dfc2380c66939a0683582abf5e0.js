@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/bing-schedules/static/js/runtime~main.e8f4652f.js"
   },
   {
-    "revision": "7f9d22be97325bd55bb2",
-    "url": "/bing-schedules/static/js/main.7f9d22be.chunk.js"
+    "revision": "c50939295a71d412e7d3",
+    "url": "/bing-schedules/static/js/main.c5093929.chunk.js"
   },
   {
     "revision": "e9afe71caef80025bc75",
@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "/bing-schedules/static/js/1.46f3e3f1.chunk.js"
   },
   {
-    "revision": "7f9d22be97325bd55bb2",
+    "revision": "c50939295a71d412e7d3",
     "url": "/bing-schedules/static/css/main.269ad8a2.chunk.css"
   },
   {
-    "revision": "b66afa5b1831a3d83fb19a8cbbc7bb47",
+    "revision": "b11941eabf277339e9ff1ea3d2fa1d0a",
     "url": "/bing-schedules/index.html"
   }
 ];

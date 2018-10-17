@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/bing-schedules/precache-manifest.698db810cd84ae811dfccf8da1276b59.js"
+  "/bing-schedules/precache-manifest.52903dfc2380c66939a0683582abf5e0.js"
 );
 
 workbox.clientsClaim();
