@@ -1,7 +1,7 @@
 {
   "main.css": "/bing-schedules/static/css/main.269ad8a2.chunk.css",
-  "main.js": "/bing-schedules/static/js/main.2a972a44.chunk.js",
-  "main.js.map": "/bing-schedules/static/js/main.2a972a44.chunk.js.map",
+  "main.js": "/bing-schedules/static/js/main.be69cc52.chunk.js",
+  "main.js.map": "/bing-schedules/static/js/main.be69cc52.chunk.js.map",
   "static/js/1.46f3e3f1.chunk.js": "/bing-schedules/static/js/1.46f3e3f1.chunk.js",
   "static/js/1.46f3e3f1.chunk.js.map": "/bing-schedules/static/js/1.46f3e3f1.chunk.js.map",
   "static/js/2.e9afe71c.chunk.js": "/bing-schedules/static/js/2.e9afe71c.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/bing-schedules/static/js/runtime~main.e8f4652f.js.map",
   "static/css/main.269ad8a2.chunk.css.map": "/bing-schedules/static/css/main.269ad8a2.chunk.css.map",
   "index.html": "/bing-schedules/index.html",
-  "precache-manifest.0a30b9015efd5f21b17f3677d290107d.js": "/bing-schedules/precache-manifest.0a30b9015efd5f21b17f3677d290107d.js",
+  "precache-manifest.0b235c60eda1405fe8fc090d1e95d7df.js": "/bing-schedules/precache-manifest.0b235c60eda1405fe8fc090d1e95d7df.js",
   "service-worker.js": "/bing-schedules/service-worker.js"
 }
