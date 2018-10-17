@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/bing-schedules/static/css/main.269ad8a2.chunk.css"
   },
   {
-    "revision": "cbc8e0dedbcecc23b061632ee964d35a",
+    "revision": "b66afa5b1831a3d83fb19a8cbbc7bb47",
     "url": "/bing-schedules/index.html"
   }
 ];
