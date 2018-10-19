@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e2e3e3;
+}
+
+body h1 {
+    margin: 0;
+    color: #FFF;
+    padding-left: 12px;
+    font-weight: normal;
+}
+
+#top-header {
+    background: #014634;
+    height: 82px;
+    line-height: 82px;
+    margin-bottom: 8px;
+}
+
+.course-container {
+    margin-left: 8px;
+}
+
+#course-container-buttons {
+    margin-top: 4px;
+}
+
+#course-container-buttons button {
+    float: left;
+    margin-right: 4px;
+    border: 1px solid #cccccc; /* #014634; */
+    border-radius: 4px;
+    background-color: #FFF;
+    color: #333333;
+}
+
+.course-select {
+    display: inline-block;
+    width: 200px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+}
