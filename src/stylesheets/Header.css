@@ -1,0 +1,34 @@
+#top-header {
+    background: #014634;
+    height: 60px;
+    line-height: 60px;
+    margin-bottom: 8px;
+}
+
+#top-header h1 {
+    margin: 0;
+    color: #fff;
+    padding-left: 12px;
+    font-weight: normal;
+    font-size: 28px;
+    float: left;
+}
+
+#top-header p {
+    display: inline;
+    color: #fff;
+    padding-right: 8px;
+}
+
+#top-header-auth-button {
+    float: right;
+    margin-right: 12px;
+}
+
+@media only screen and (max-width: 609px) {
+    #top-header h1 {
+        display: none;
+        font-size: 12px;
+        float: left;
+    }
+}

@@ -1,0 +1,28 @@
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin-left: 12px;
+  position: relative;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  vertical-align: bottom;
+  /* TODO: Fix overflow */
+}
+
+/* .card-content {
+  padding: 12px;
+} */
+
+.card-header {
+  color: #fff;
+  background-color: #014634;
+  padding: 4px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
