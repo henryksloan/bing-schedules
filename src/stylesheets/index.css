@@ -9,7 +9,7 @@ html, body, #root, #app {
 }
 
 .button {
-    border: none;
+    border: 1px solid #e5e5e5;
     text-align: center;
     text-decoration: none;
     display: inline-block;

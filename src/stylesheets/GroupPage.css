@@ -1,0 +1,20 @@
+#group-page-container {
+    margin: 8px;
+}
+
+#group-my-schedule-card .card-content {
+    padding: 12px;
+}
+
+#group-my-schedule-card .weekview-table {
+    height: 600px;
+}
+
+#group-schedules {
+    padding-top: 12px;
+}
+
+#group-schedules .weekview-table {
+    width: 100%;
+    height: 600px;
+}

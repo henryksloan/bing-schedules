@@ -3,16 +3,28 @@
     border-collapse: separate;
     border-spacing: 0;
     width: 55%;
+    height: 100%;
     table-layout: fixed;
 }
 
-.weekview-table td > div {
+.weekview-table td span {
+    display:block;
+    position: relative;
+    height: 100%;
+}
+
+.weekview-table td div {
     overflow: hidden;
-    /* height: 15px; */
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 100%;*/
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
 .weekview-table tr {
-    height: 16px; /* 8px; */
+    /* height: 16px; */ /* 8px; */
 }
 
 .weekview-table tr td:first-child {
@@ -20,7 +32,7 @@
     border-width: 1px 1px 0 0;
 }
 
-tbody tr:first-child td:first-child {
+.weekview-table tbody tr:first-child td:first-child {
     border-top: 0;
 }
 
@@ -29,7 +41,7 @@ tbody tr:first-child td:first-child {
     border-width: 0 1px 1px 0;
 }
 
-thead th:nth-child(2) {
+.weekview-table thead th:nth-child(2) {
     border-left: 0;
 }
 
@@ -52,23 +64,23 @@ thead th:nth-child(2) {
     /* border-width: 0 0 1px 1px; */
 }
 
-tbody tr:nth-child(8n-7),
-tbody tr:nth-child(8n-6),
-tbody tr:nth-child(8n-5),
-tbody tr:nth-child(8n-4) {
+.weekview-table tr:nth-child(8n-7),
+.weekview-table tbody tr:nth-child(8n-6),
+.weekview-table tbody tr:nth-child(8n-5),
+.weekview-table tbody tr:nth-child(8n-4) {
     background-color: #f5f5f5;
 }
 
-tbody tr:nth-child(8n-3),
-tbody tr:nth-child(8n-2),
-tbody tr:nth-child(8n-1),
-tbody tr:nth-child(8n) {
+.weekview-table tbody tr:nth-child(8n-3),
+.weekview-table tbody tr:nth-child(8n-2),
+.weekview-table tbody tr:nth-child(8n-1),
+.weekview-table tbody tr:nth-child(8n) {
     background-color: #e5e5e5;
 }
 
 .weekview-title {
-    background-color: #014634;
-    color: #fff;
+    background-color: #014634 !important;
+    color: #fff !important;
 }
 .weekview-title td {
     padding: 4px;

@@ -74,3 +74,7 @@
     display: inline;
     font-size: 14px;
 }
+
+#my-schedules-card .card-content > div {
+    height: 100%;
+}

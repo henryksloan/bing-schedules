@@ -14,6 +14,13 @@
     float: left;
 }
 
+#top-header img {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin: 4px 0 0 8px;
+}
+
 #top-header p {
     display: inline;
     color: #fff;
@@ -28,7 +35,9 @@
 @media only screen and (max-width: 609px) {
     #top-header h1 {
         display: none;
-        font-size: 12px;
-        float: left;
+    }
+
+    #top-header img {
+        display: inline;
     }
 }
