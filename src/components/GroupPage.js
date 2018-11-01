@@ -1,7 +1,6 @@
 import React from "react";
 import queryString from "query-string";
 
-import ScheduleSelector from "./ScheduleSelector.js";
 import WeekView from "./WeekView.js";
 import Card from "./Card.js"
 
@@ -23,7 +22,9 @@ class GroupPage extends React.Component {
       user: null,
       group: {},
       schedules: [],
-      role: null
+      role: null,
+      exists: true,
+      edit_schedule: false
     };
   }
 
@@ -43,6 +44,8 @@ class GroupPage extends React.Component {
           .doc(groupId)
           .get()
           .then(group => {
+            this.setState({exists: group.exists});
+            if (!group.exists) return;
             let roles = group.data().roles;
             if (roles[user.uid] == null) {
               roles[user.uid] = "member";
@@ -114,6 +117,22 @@ class GroupPage extends React.Component {
   }
 
   render() {
+    if (this.state.groupId == null || !this.state.exists) {
+      return (
+        <div id="group-page-container">
+          <h2>Group not found</h2>
+        </div>
+      );
+    }
+
+    if (!this.props.user) {
+      return (
+        <div id="group-page-container">
+          <h2>Please login to view this group</h2>
+        </div>
+      );
+    }
+
     let courses = [];
     let user_courses = null;
     if (this.state.schedules) {
@@ -151,7 +170,9 @@ class GroupPage extends React.Component {
                 days: days[i],
                 time_start: time_split[0].trim(),
                 time_end: time_split[1].trim(),
-                name: names[i]
+                name: names[i],
+                times: times[i],
+                course: content.subject + " " + content.code + "-" + content.section
               });
             }
           }
@@ -163,14 +184,6 @@ class GroupPage extends React.Component {
           courses.push([this.state.schedules[uid][0], courses_i]);
         }
       }, this);
-    }
-
-    if (this.state.groupId == null) {
-      return (
-        <div id="group-page-container">
-          <h2>Group not found</h2>
-        </div>
-      );
     }
 
     let schedule_rows = [];
@@ -197,29 +210,44 @@ class GroupPage extends React.Component {
     return (
       <div id="group-page-container">
         <div id="group-my-schedule-card">
-          <Card title="My Schedule">
-            <ScheduleSelector user={this.props.user} group_id={this.state.groupId} />
-            {this.props.user ?
+          <Card title="My Schedule"
+            editButton={<button style={{float: "right"}} className="button gray"
+              onClick={() => {this.setState({edit_schedule: !this.state.edit_schedule})}}>
+              {this.state.edit_schedule ? "Cancel" : "Edit schedule"}</button>}>
+            {this.props.user && this.state.schedules[this.props.user.uid] ?
+              <span>
               <UserScheduleContainer
                 noWeekend
                 data={this.props.data}
                 user={this.props.user}
-                schedule={this.state.schedules[this.props.user.uid]}
-                edit_schedule={false}
+                schedule={this.state.schedules[this.props.user.uid][1]}
+                edit_schedule={this.state.edit_schedule}
                 courses={user_courses}
+                onSubmit={() => {this.setState({edit_schedule: false})}}
                 getField={this.props.getField}
                 getTime={(subject, code, section) => {
                   return this.props.getField(subject, code, section, "time").join(", ");
                 }} />
+                {/* <button style={{position: "absolute", right: 20, bottom: 20}}
+              className={"button large " + (this.state.edit_schedule ? "gray" : "green")}
+              onClick={() => {this.setState({edit_schedule: !this.state.edit_schedule})}}>
+              {this.state.edit_schedule ? "Cancel" : "Edit schedule"}
+              </button> */}
+              </span>
               :
               null}
           </Card>
         </div>
-        <table id="group-schedules">
+        <div id="group-schedules">
+          {courses.map((courses_i, i) => {
+            return <WeekView key={i} title={courses_i[0]} courses={courses_i[1]} noWeekend />
+          })}
+        </div>
+        {/* <table id="group-schedules">
           <tbody>
             {schedule_rows}
           </tbody>
-        </table>
+        </table> */}
         {/* courses.map((courses_i, i) => {
               return (
                 <div key={i}>

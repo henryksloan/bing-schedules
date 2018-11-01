@@ -122,7 +122,9 @@ class Landing extends React.Component {
               days: days[i],
               time_start: time_split[0].trim(),
               time_end: time_split[1].trim(),
-              name: names[i]
+              name: names[i],
+              times: times[i],
+              course: content.subject + " " + content.code + "-" + content.section
             });
           }
         }
@@ -170,8 +172,12 @@ class Landing extends React.Component {
           </Card>
         </div>
         <div id="my-schedules-card">
-          <Card title="My Schedule">
+          <Card title="My Schedule"
+            editButton={<button style={{float: "right"}} className="button gray"
+              onClick={() => {this.setState({edit_schedule: !this.state.edit_schedule})}}>
+              {this.state.edit_schedule ? "Cancel" : "Edit schedule"}</button>}>
             <UserScheduleContainer
+              noWeekend
               data={this.props.data}
               user={this.props.user}
               schedule={this.state.schedule}
@@ -179,11 +185,6 @@ class Landing extends React.Component {
               courses={courses}
               getField={this.props.getField}
               onSubmit={() => {this.setState({edit_schedule: false})}} />
-            <button style={{position: "absolute", right: 20, bottom: 20}}
-              className={"button large " + (this.state.edit_schedule ? "gray" : "green")}
-              onClick={() => {this.setState({edit_schedule: !this.state.edit_schedule})}}>
-              {this.state.edit_schedule ? "Cancel" : "Edit schedule"}
-            </button>
           </Card>
         </div>
       </div>

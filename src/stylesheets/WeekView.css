@@ -2,7 +2,7 @@
     border: 1px solid #cccccc;
     border-collapse: separate;
     border-spacing: 0;
-    width: 55%;
+    width: 715px; /* 55%; */
     height: 100%;
     table-layout: fixed;
 }
@@ -15,12 +15,14 @@
 
 .weekview-table td div {
     overflow: hidden;
-    /* text-overflow: ellipsis;
-    white-space: nowrap;
-    height: 100%;*/
-    position: absolute;
+    font-size: 12px;
+    /*position: absolute;
     width: 100%;
-    top: 0;
+    top: 0;*/
+}
+
+.weekview-table td b {
+    font-size: 14px;
 }
 
 .weekview-table tr {
@@ -79,6 +81,7 @@
 }
 
 .weekview-title {
+    height: 19px;
     background-color: #014634 !important;
     color: #fff !important;
 }

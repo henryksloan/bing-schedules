@@ -118,7 +118,7 @@ class WeekView extends React.Component {
           day_codes.indexOf(course.days.charAt(i)),
           course.time_start,
           course.time_end,
-          course.name
+          <span key={i}><b>{course.name}</b><br />{course.course}<br />{course.times}</span>
         );
       }
     });
@@ -133,7 +133,7 @@ class WeekView extends React.Component {
           day_codes.indexOf(course.days.charAt(i)),
           course.time_start,
           course.time_end,
-          course.name
+          <span key={i}><b>{course.name}</b><br />{course.course}<br />{course.times}</span>
         );
       }
     });

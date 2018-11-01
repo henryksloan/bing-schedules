@@ -3,7 +3,7 @@
 }
 
 #group-my-schedule-card .card-content {
-    padding: 12px;
+    min-height: 600px;
 }
 
 #group-my-schedule-card .weekview-table {
@@ -12,9 +12,18 @@
 
 #group-schedules {
     padding-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #group-schedules {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 #group-schedules .weekview-table {
     width: 100%;
-    height: 600px;
+    min-height: 600px;
 }
