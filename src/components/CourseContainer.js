@@ -26,7 +26,6 @@ class CourseContainer extends React.Component {
     ];
 
     if (props.initial) {
-      console.log(props.initial);
       initial_entries = props.initial.reduce((obj, x) => {
         obj.push({subject: {value: x.content.subject, label: x.content.subject},
                   code: {value: x.content.code, label: x.content.code},
