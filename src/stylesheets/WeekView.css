@@ -88,3 +88,11 @@
 .weekview-title td {
     padding: 4px;
 }
+
+.card-content .weekview-table {
+    border-bottom-left-radius: 4px;
+}
+
+.card-content .weekview-table tr:nth-last-child(4) .weekview-cell-label {
+    border-bottom-left-radius: 4px;
+}

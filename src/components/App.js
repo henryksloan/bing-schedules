@@ -19,6 +19,7 @@ class App extends React.Component {
   componentDidMount() {
     auth.onAuthStateChanged(user => {
       user ? this.setState({ user: user }) : this.setState({ user: null });
+      localStorage.setItem("uid", user.uid);
     });
   }
 

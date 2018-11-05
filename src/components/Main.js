@@ -15,7 +15,7 @@ class Main extends React.Component {
 
     this.state = {data: null};
 
-    auth.onAuthStateChanged(user => {
+    auth.onAuthStateChanged(async user => {
       if (user) {
         firebase
           .firestore()

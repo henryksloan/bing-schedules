@@ -4,6 +4,7 @@
 
 #group-my-schedule-card .card-content {
     min-height: 600px;
+    overflow-x: auto;
 }
 
 #group-my-schedule-card .weekview-table {
@@ -12,18 +13,33 @@
 
 #group-schedules {
     padding-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+}
+
+#group-schedules .weekview-table {
+    width: 100%;
+    min-height: 600px;
+}
+
+#group-schedules .card-content {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 732px) {
+    #group-page-container .card {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 733px) {
+    #group-schedules {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     #group-schedules {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-
-#group-schedules .weekview-table {
-    width: 100%;
-    min-height: 600px;
 }

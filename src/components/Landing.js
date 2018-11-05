@@ -19,7 +19,7 @@ class Landing extends React.Component {
   }
 
   componentDidMount() {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged(async user => {
       if (user) {
         let groups_ref = firebase.firestore().collection("groups");
 

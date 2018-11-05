@@ -228,20 +228,19 @@ class GroupPage extends React.Component {
                 getTime={(subject, code, section) => {
                   return this.props.getField(subject, code, section, "time").join(", ");
                 }} />
-                {/* <button style={{position: "absolute", right: 20, bottom: 20}}
-              className={"button large " + (this.state.edit_schedule ? "gray" : "green")}
-              onClick={() => {this.setState({edit_schedule: !this.state.edit_schedule})}}>
-              {this.state.edit_schedule ? "Cancel" : "Edit schedule"}
-              </button> */}
               </span>
               :
               null}
           </Card>
         </div>
         <div id="group-schedules">
-          {courses.map((courses_i, i) => {
-            return <WeekView key={i} title={courses_i[0]} courses={courses_i[1]} noWeekend />
-          })}
+            {courses.map((courses_i, i) => {
+              return (
+                <Card key={i} title={courses_i[0]}>
+                  <WeekView courses={courses_i[1]} noWeekend />
+                </Card>
+              );
+            })}
         </div>
         {/* <table id="group-schedules">
           <tbody>

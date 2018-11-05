@@ -1,6 +1,6 @@
 .card {
     background: #fff;
-    border-radius: 2px;
+    border-radius: 4px;
     /* display: inline-block; */
     height: 300px;
     margin-left: 12px;
@@ -10,7 +10,6 @@
     vertical-align: bottom;
     display: flex;
     flex-flow: column;
-    /* TODO: Fix overflow */
 }
 
 /* .card-content {
@@ -19,6 +18,8 @@
 
 .card-header {
     color: #fff;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     background-color: #014634;
     padding: 4px;
     flex: 0 1 auto;

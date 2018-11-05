@@ -146,6 +146,11 @@ class WeekView extends React.Component {
   addBlock(day_index, group_index, row_index, row_span, inner_html) {
     let day_fixed = row_index === 0 ? day_index + 1 : day_index;
     let row_groups = this.state.row_groups;
+    if (!row_groups[group_index]
+      || !row_groups[group_index][row_index]
+      || !row_groups[group_index][row_index][day_fixed]) {
+      return;
+    }
     let key = row_groups[group_index][row_index][day_fixed].key;
     row_groups[group_index][row_index][day_fixed] = (
       <td rowSpan={row_span} style={{ backgroundColor: "#ccc", height: "100%" }} key={key}>
