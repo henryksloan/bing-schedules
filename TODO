@@ -13,6 +13,7 @@ User schedules:
     ☐ When creating new schedules, users should be able to duplicate all or some of the categories (e.g. courses) from old schedules
 
 Group settings:
+  ☐ Creating a group should send the user to the group page
   ☐ Verify how "members can view schedules" works
   ☐ Allow control over event types allowed
 

@@ -31,7 +31,7 @@ class GroupPage extends React.Component {
   componentDidMount() {
     auth.onAuthStateChanged(user => {
       if (user) {
-        console.log(user);
+        // console.log(user);
 
         const values = queryString.parse(this.props.location.search);
         let groupId = values.groupId;
