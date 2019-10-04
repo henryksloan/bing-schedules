@@ -1,5 +1,12 @@
+.weekview-table {
+    max-width: 850px;
+} 
 #group-page-container {
     margin: 8px;
+}
+
+#group-my-schedule-card .card {
+    height: 650px;
 }
 
 #group-my-schedule-card .card-content {
@@ -7,8 +14,13 @@
     overflow-x: auto;
 }
 
+#group-my-schedule-card .card-content > span > div {
+    height: 100%;
+}
+
 #group-my-schedule-card .weekview-table {
-    height: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 #group-schedules {
@@ -20,8 +32,13 @@
     min-height: 600px;
 }
 
+#group-schedules .card {
+    min-height: 650px;
+}
+
 #group-schedules .card-content {
     overflow-x: auto;
+    min-height: 600px;
 }
 
 @media only screen and (max-width: 732px) {

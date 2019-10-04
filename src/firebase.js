@@ -16,4 +16,18 @@ const firestore = firebase.firestore();
 const settings = {timestampsInSnapshots: true};
 firestore.settings(settings);
 
+firebase.firestore().enablePersistence()
+  .catch(function(err) {
+      if (err.code === 'failed-precondition') {
+          // Multiple tabs open, persistence can only be enabled
+          // in one tab at a a time.
+          console.log(err.code);
+      } else if (err.code === 'unimplemented') {
+          // The current browser does not support all of the
+          // features required to enable persistence
+          console.log(err.code);
+      }
+  });
+firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+
 export default firebase;

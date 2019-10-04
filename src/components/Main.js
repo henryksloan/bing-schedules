@@ -45,8 +45,12 @@ class Main extends React.Component {
   }
 
   getField(subject, code, section, field) {
-    if (this.state.data && subject && code && section) {
-      let course = this.state.data[subject][code][section];
+    const get = (p, o) => p.reduce((xs, x) => (xs && xs[x]) ? xs[x] : null, o)
+    let course = get([subject, code, section], this.state.data)
+    console.log(subject, code, section, course)
+
+    // if (this.state.data && subject && code && section) {
+      // let course = this.state.data[subject][code][section];
       if (course) {
         if (course[field].constructor === Array) {
           return course[field];
@@ -58,8 +62,8 @@ class Main extends React.Component {
       }
 
       return "";
-    }
-    return "";
+    // }
+    // return "";
   }
 
   render() {

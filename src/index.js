@@ -2,9 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker.js';
-import App from './components/App.js'
+import App from './components/App.js';
 
-import './stylesheets/index.css'
+import 'normalize.css';
+import './stylesheets/index.css';
 
 ReactDOM.render((
   <BrowserRouter basename={process.env.PUBLIC_URL}>

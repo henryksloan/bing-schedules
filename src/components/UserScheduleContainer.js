@@ -12,7 +12,11 @@ class UserScheduleContainer extends React.Component {
             user={this.props.user}
             initial={this.props.schedule}
             getTime={(subject, code, section) => {
-              return this.props.getField(subject, code, section, "time").join(", ");
+              let times = this.props.getField(subject, code, section, "time");
+              console.log(times);
+              return this.props.getField(subject, code, section, "days").map((day, i) => {
+                return day + " " + times[i] || times[0];
+              }).join(", ");
             }}
             onSubmit={this.props.onSubmit} />
           :

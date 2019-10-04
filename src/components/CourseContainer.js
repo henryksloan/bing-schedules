@@ -326,7 +326,7 @@ class CourseContainer extends React.Component {
     }, []);
 
     if (activities.length > 0) {
-      return <div>Add activities: {activities}</div>;
+      return <div className="add-activities">Add activities: {activities}</div>;
     }
   }
 

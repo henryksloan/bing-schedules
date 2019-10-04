@@ -1,0 +1,32 @@
+Course container input:
+  ☐ Fix Tab
+
+User schedules:
+  ☐ Multiple schedules
+  Events rework:
+    ☐ Allow repeated or singular custom events
+    ☐ Create different default and custom types (course, club, custom, other)
+    ☐ Integrate these changes into the schedule editor
+    ☐ Think about what distinctions should be made between different subsets of schedule, e.g. courses, courses+clubs, etc
+      Groups should be able to control what event types are allowed
+      Therefore, it should be easy to change the type of an event
+    ☐ When creating new schedules, users should be able to duplicate all or some of the categories (e.g. courses) from old schedules
+
+Group settings:
+  ☐ Verify how "members can view schedules" works
+  ☐ Allow control over event types allowed
+
+Adding people to groups:
+  ☐ Link sharing
+    Anyone with link can ___
+  ☐ Codes like jackbox or kahoot
+  ☐ Add by email with optional email notification and message
+
+Responsive Design and Usability:
+  ☐ Consider combining my groups and create a group
+    Maybe just for small screens, but perhaps also in general to be consistent
+    Would probably be best to create a popup for group creation settings
+    In that case, there should be a plus FAB or inline new group button entry
+
+Queries:
+  ☐ 

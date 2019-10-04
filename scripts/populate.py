@@ -4,7 +4,8 @@ import pandas as pd
 import re
 
 # The current class term, e.g. Fall 2018
-term_in = "201890";
+# term_in = "201890";
+term_in = "201920";
 
 # Returns a url linking to a list of all classes of a given subject in term term_in
 def subj_courses_url(sel_subj, sel_crse=""):

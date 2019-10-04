@@ -20,17 +20,21 @@ class Header extends React.Component {
   logout() {
     auth.signOut().then(() => {
       this.props.logout();
+      localStorage.setItem("uid", "");
     });
   }
 
   login() {
-    provider.setCustomParameters({
-      prompt: "select_account"
-    });
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
+      provider.setCustomParameters({
+        prompt: "select_account"
+      });
 
-    auth.signInWithPopup(provider).then(result => {
-      const user = result.user;
-      this.props.login(user);
+      auth.signInWithPopup(provider).then(result => {
+        const user = result.user;
+        this.props.login(user);
+      });
     });
   }
 
